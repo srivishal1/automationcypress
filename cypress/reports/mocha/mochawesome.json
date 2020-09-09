@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-09-08T13:12:11.842Z",
+    "end": "2020-09-08T13:12:45.144Z",
+    "duration": 33302,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f4716162-a780-49e4-8459-4460d4f432c6",
+      "title": "",
+      "fullFile": "cypress/integration/testCases/2.spec.js",
+      "file": "cypress/integration/testCases/2.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "635a66fb-0b25-4fee-830c-59a2ee31fba0",
+          "title": "CreateAccount",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create Parent Account",
+              "fullTitle": "CreateAccount Create Parent Account",
+              "timedOut": null,
+              "duration": 25968,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.location('protocol').should('eq', 'https:');\ncy.get('p').contains('click here').first().click();",
+              "err": {},
+              "uuid": "cc065805-87e0-4ae2-b51f-7d8b3a51c87e",
+              "parentUUID": "635a66fb-0b25-4fee-830c-59a2ee31fba0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cc065805-87e0-4ae2-b51f-7d8b3a51c87e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 25968,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
