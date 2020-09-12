@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2020-09-08T13:12:11.842Z",
-    "end": "2020-09-08T13:12:45.144Z",
-    "duration": 33302,
+    "start": "2020-09-12T12:13:05.774Z",
+    "end": "2020-09-12T12:13:46.315Z",
+    "duration": 40541,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,17 +18,17 @@
   },
   "results": [
     {
-      "uuid": "f4716162-a780-49e4-8459-4460d4f432c6",
+      "uuid": "506f1669-43c4-4810-8ccb-66cdb63c3c12",
       "title": "",
-      "fullFile": "cypress/integration/testCases/2.spec.js",
-      "file": "cypress/integration/testCases/2.spec.js",
+      "fullFile": "cypress/integration/regression/CreateAccount.spec copy 2.js",
+      "file": "cypress/integration/regression/CreateAccount.spec copy 2.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "635a66fb-0b25-4fee-830c-59a2ee31fba0",
-          "title": "CreateAccount",
+          "uuid": "c7524b36-e42e-4134-b58d-c0f9f0c4819b",
+          "title": "Create Account",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
@@ -36,31 +36,31 @@
           "tests": [
             {
               "title": "Create Parent Account",
-              "fullTitle": "CreateAccount Create Parent Account",
+              "fullTitle": "Create Account Create Parent Account",
               "timedOut": null,
-              "duration": 25968,
+              "duration": 35763,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.location('protocol').should('eq', 'https:');\ncy.get('p').contains('click here').first().click();",
+              "code": "cy.LaunchApplication();\nhomePageObj.checkifHomePageOpened();\nhomePageObj.clickOnParentSignUpBtn();\nregistrationPageObj.checkRegistartionPageOpened();\nregistrationPageObj.selectPrefix(\"Mr.\");\nvar firstName = \"automationfname\" + makeid(3);\naccountdetails[\"firstName\"] = firstName;\nregistrationPageObj.enterFirstName(firstName);\ncy.log(\"firstname is \" + accountdetails[\"firstName\"]);\nvar lastName = \"automationlname\" + makeid(3);\nregistrationPageObj.enterInitial(\"Mr\");\nregistrationPageObj.enterLastName(lastName);\naccountdetails[\"lastName\"] = lastName;\nregistrationPageObj.enterPrimaryPhoneNo(\"555-5555-5555\");\nregistrationPageObj.selectPrimaryPhoneType(\"Mobile\");\nregistrationPageObj.enterPrarentAddressLineOne(\"191 NY\");\nregistrationPageObj.enterPrarentAddressLineTwo(\"NJ\");\nregistrationPageObj.selectCountry(\"India\");\nregistrationPageObj.enterCity(\"New York\");\nregistrationPageObj.enterZip(\"11111\"); //registrationPageObj.selectState(\"AE\")\nregistrationPageObj.enterParentEmail(firstName + \"@gmail.com\");\nregistrationPageObj.enterParentPassword(\"pencils14!\");\nregistrationPageObj.enterConfirmPassword(\"pencils14!\");",
               "err": {},
-              "uuid": "cc065805-87e0-4ae2-b51f-7d8b3a51c87e",
-              "parentUUID": "635a66fb-0b25-4fee-830c-59a2ee31fba0",
+              "uuid": "3dba3b42-78d1-448d-b429-dd7b1a103a87",
+              "parentUUID": "c7524b36-e42e-4134-b58d-c0f9f0c4819b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "cc065805-87e0-4ae2-b51f-7d8b3a51c87e"
+            "3dba3b42-78d1-448d-b429-dd7b1a103a87"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 25968,
+          "duration": 35763,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

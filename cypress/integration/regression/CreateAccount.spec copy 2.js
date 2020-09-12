@@ -1,5 +1,5 @@
-import homePage from '../pageObjects/homePage'
-import registrationPage from '../pageObjects/registrationPage'
+import homePage from '../../pageObjects/homePage'
+import registrationPage from '../../pageObjects/registrationPage'
 
 describe('Create Account',function(){
 
@@ -25,13 +25,13 @@ describe('Create Account',function(){
         registrationPageObj.checkRegistartionPageOpened()
         registrationPageObj.selectPrefix("Mr.")
         var firstName= "automationfname"+makeid(3)
-        accountdetails["firstName"]={firstName}
+        accountdetails["firstName"]=firstName
         registrationPageObj.enterFirstName(firstName)
         cy.log("firstname is "+accountdetails["firstName"])
         var lastName= "automationlname"+makeid(3)
         registrationPageObj.enterInitial("Mr")
         registrationPageObj.enterLastName(lastName)
-        accountdetails["lastName"]={lastName}
+        accountdetails["lastName"]=lastName
         registrationPageObj.enterPrimaryPhoneNo("555-5555-5555")
         registrationPageObj.selectPrimaryPhoneType("Mobile")
         registrationPageObj.enterPrarentAddressLineOne("191 NY")

@@ -1,84 +1,23 @@
 {
   "stats": {
-    "suites": 1,
-    "tests": 1,
+    "suites": 0,
+    "tests": 0,
     "passes": 0,
     "pending": 0,
-    "failures": 1,
-    "start": "2020-09-08T13:12:49.871Z",
-    "end": "2020-09-08T13:13:07.410Z",
-    "duration": 17539,
-    "testsRegistered": 1,
-    "passPercent": 0,
-    "pendingPercent": 0,
+    "failures": 0,
+    "start": "2020-09-12T12:14:17.227Z",
+    "end": "2020-09-12T12:14:17.228Z",
+    "duration": 1,
+    "testsRegistered": 0,
+    "passPercent": null,
+    "pendingPercent": null,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false
   },
   "results": [
-    {
-      "uuid": "024251ce-817a-47d1-8b00-bd1207f87545",
-      "title": "",
-      "fullFile": "cypress/integration/testCases/CreateAccount.spec.js",
-      "file": "cypress/integration/testCases/CreateAccount.spec.js",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
-        {
-          "uuid": "c5b07619-ef83-4b6d-87e6-4806d5a6d13f",
-          "title": "Create Account",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "CreateParentAccount",
-              "fullTitle": "Create Account CreateParentAccount",
-              "timedOut": null,
-              "duration": 12000,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
-              "pending": false,
-              "context": null,
-              "code": "/// cy.visit('/#')\ncy.LaunchApplication();\ncy.get('h1[class=\"text-center\"]').contains('Create an Account').should('be.visible'); ///cy.get('h1[class=\"text-center\"]').should('eq','Create an Account')\ncy.location('protocol').should('eq', 'htps:');\ncy.get('p').contains('click here').first().click();",
-              "err": {
-                "message": "AssertionError: Timed out retrying: expected 'https:' to equal 'htps:'",
-                "estack": "AssertionError: Timed out retrying: expected 'https:' to equal 'htps:'\n    at Context.eval (https://portal-dev.ssat.org/__cypress/tests?p=cypress/integration/testCases/CreateAccount.spec.js:105:29)",
-                "diff": "- 'https:'\n+ 'htps:'\n"
-              },
-              "uuid": "15500b73-dc29-4344-b14b-5e6a2eb3060a",
-              "parentUUID": "c5b07619-ef83-4b6d-87e6-4806d5a6d13f",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [],
-          "failures": [
-            "15500b73-dc29-4344-b14b-5e6a2eb3060a"
-          ],
-          "pending": [],
-          "skipped": [],
-          "duration": 12000,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
-    }
+    false
   ],
   "meta": {
     "mocha": {
