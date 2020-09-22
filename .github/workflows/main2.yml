@@ -1,12 +1,17 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Automation Run
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
   workflow_dispatch:
-  
+   inputs:
+      environment:
+        description: 'select config to run '
+        required: true
+        default: 'dev'
+
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -24,6 +29,22 @@ jobs:
       - name: install npm
         run: npm install
       - name: cypress run
-        run: npm run test
+          with:
+          record: true
+        run: npm run test -env configFile=${{ github.event.inputs.environment }}
+        env:
+          # pass the Dashboard record key as an environment variable
+          CYPRESS_RECORD_KEY: 223e5d7e-ab60-48ca-811c-4b9ccc5f42c8
+    - uses: actions/upload-artifact@v1
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+      # Test run video was always captured, so this action uses "always()" condition
+      - uses: actions/upload-artifact@v1
+        if: always()
+        with:
+          name: cypress-videos
+          path: cypress/videos
 
       
