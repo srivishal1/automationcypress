@@ -35,11 +35,11 @@ jobs:
         env:
           # pass the Dashboard record key as an environment variable
           CYPRESS_RECORD_KEY: 223e5d7e-ab60-48ca-811c-4b9ccc5f42c8
-    - uses: actions/upload-artifact@v1
+      - uses: actions/upload-artifact@v1
         if: failure()
         with:
-          name: cypress-screenshots
-          path: cypress/screenshots
+              name: cypress-screenshots
+              path: cypress/screenshots
       # Test run video was always captured, so this action uses "always()" condition
       - uses: actions/upload-artifact@v1
         if: always()
