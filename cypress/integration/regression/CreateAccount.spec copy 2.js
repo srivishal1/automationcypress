@@ -19,8 +19,7 @@ describe('Create Account',function(){
      var accountdetails = {} 
     it('Create Parent Account',function(){
 
-        cy.visit(Cypress.env("baseUrl"))
-        //cy.LaunchApplication()
+        cy.LaunchApplication()
         homePageObj.checkifHomePageOpened()
         homePageObj.clickOnParentSignUpBtn()
         registrationPageObj.checkRegistartionPageOpened()

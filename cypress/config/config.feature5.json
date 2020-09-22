@@ -1,10 +1,6 @@
 {
-    
-    "reporter": "cypress-multi-reporters",
-    "env": {
-        
-        "baseUrl" : "http://ssatbportaldev2-feature5.azurewebsites.net"
-        
-    }
+    "baseUrl" : "http://ssatbportaldev2-feature5.azurewebsites.net",
+    "reporter": "cypress-multi-reporters"
+
    
 }
