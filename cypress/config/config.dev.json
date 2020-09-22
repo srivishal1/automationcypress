@@ -1,0 +1,8 @@
+{
+    "baseUrl" : "http://portal-dev.ssat.org/",
+      "reporter": "cypress-multi-reporters",
+      "env": {
+        "environment": "dev"
+      
+      }
+   }

@@ -1,7 +1,10 @@
+
 Cypress.Commands.add("LaunchApplication",() => {
-    cy.visit('/#')
+    cy.visit('/')
 
 })
+
+
 
 
 

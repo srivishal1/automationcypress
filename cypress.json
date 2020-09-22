@@ -1,15 +1,16 @@
 {
-    "baseUrl" : "http://portal-dev.ssat.org/",
-    "Environment" : "dev",
-    "reporter": "cypress-multi-reporters",
-    "reporterOptions": {
-        "reporterEnabled": "mochawesome",
-        "mochawesomeReporterOptions": {
-            "reportDir": "cypress/reports/mocha",
-            "quite": true,
-            "overwrite": false,
-            "html": false,
-            "json": true
-        }
+  "baseUrl": "http://portal-dev.ssat.org/",
+  "Environment": "dev",
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "reporterEnabled": "mochawesome",
+    "mochawesomeReporterOptions": {
+      "reportDir": "cypress/reports/mocha",
+      "quite": true,
+      "overwrite": false,
+      "html": false,
+      "json": true
     }
+  },
+  "projectId": "wyq61k"
 }

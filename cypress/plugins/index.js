@@ -1,4 +1,41 @@
 /// <reference types="cypress" />
+const path = require("path");
+
+
+function getConfigurationByFile (file) {
+  const path = require("path");
+  const fs = require("fs-extra");
+  const pathToConfigFile = path.resolve('/Users/vishal.srivastava/Documents/EMAAutomationDemo/cypress', 'config', `config.${file}.json`)
+
+  return fs.readJson(pathToConfigFile)
+}
+
+// plugins file
+module.exports = (on, config) => {
+  // accept a configFile value or use development by default
+  // on('before:browser:launch', (browser = {}, args) => {
+  //   console.log(config, browser, args);
+  //   if (browser.name === 'chrome') {
+  //     args.push("--disable-features=CrossSiteDocumentBlockingIfIsolating,CrossSiteDocumentBlockingAlways,IsolateOrigins,site-per-process");
+  //   }
+  //   return args;
+  // });
+
+
+  const file = config.env.configFile || 'development'
+
+  return getConfigurationByFile(file)
+}
+
+// function getConfigurationFileByEnvName(env) {
+//   const fileLocation = path.resolve("cypress/config", `config.${env}.json`);
+//   return fs.readJson(fileLocation);
+// }
+// module.exports = (on, config) => {  
+//   const envFile = config.env.configFile;
+//   return getConfigurationFileByEnvName(envFile);
+// };
+
 // ***********************************************************
 // This example plugins/index.js can be used to load plugins
 //
@@ -15,26 +52,19 @@
 /**
  * @type {Cypress.PluginConfig}
  */
-module.exports = (on, config) => {
-  // `on` is used to hook into various events Cypress emits
-  // `config` is the resolved Cypress config
-}
 
-// const selectTests = require('cypress-select-tests')
 
-// const pickTests = (filename, foundTests, cypressConfig) => {
-//   console.log('picking tests from file', filename)
 
-//   // found tests will be names of the tests found in "filename" spec
-//   // it is a list of names, each name an Array of strings
-//   // ['suite 1', 'suite 2', ..., 'test name']
-//   console.log('found tests')
-//   console.log(foundTests)
+// function getConfigurationByFile (file) {
+//   const pathToConfigFile = path.resolve('..', 'config', `${file}.json`)
 
-//   // let's only run tests with "does" in the title
-//   return foundTests.filter(fullTestName => fullTestName.join(' ').includes('does'))
+//   return fs.readJson(pathToConfigFile)
 // }
 
+// // plugins file
 // module.exports = (on, config) => {
-//   on('file:preprocessor', selectTests(config, pickTests))
+//   // accept a configFile value or use development by default
+//   const file = config.env.configFile || 'development'
+
+//   return getConfigurationByFile(file)
 // }
