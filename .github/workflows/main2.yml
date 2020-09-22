@@ -29,7 +29,7 @@ jobs:
       - name: install npm
         run: npm install
       - name: cypress run
-        run: npm run test -env configFile=${{ github.event.inputs.name}}
+        run: npm run test -env configFile=${{ github.event.inputs.environment}}
         
         env:
           # pass the Dashboard record key as an environment variable
