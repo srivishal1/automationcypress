@@ -5,7 +5,7 @@ const path = require("path");
 function getConfigurationByFile (file) {
   const path = require("path");
   const fs = require("fs-extra");
-  const pathToConfigFile = path.resolve('/Users/vishal.srivastava/Documents/EMAAutomationDemo/cypress', 'config', `config.${file}.json`)
+  const pathToConfigFile = path.resolve('./cypress', 'config', `config.${file}.json`)
 
   return fs.readJson(pathToConfigFile)
 }
@@ -22,11 +22,10 @@ module.exports = (on, config) => {
   // });
 
 
-  const file = config.env.configFile 
+  const file = config.env.configFile || 'development'
 
   return getConfigurationByFile(file)
 }
-
 // function getConfigurationFileByEnvName(env) {
 //   const fileLocation = path.resolve("cypress/config", `config.${env}.json`);
 //   return fs.readJson(fileLocation);
