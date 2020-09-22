@@ -22,7 +22,7 @@ module.exports = (on, config) => {
   // });
 
 
-  const file = config.env.configFile || 'development'
+  const file = config.env.configFile 
 
   return getConfigurationByFile(file)
 }
