@@ -31,7 +31,7 @@ jobs:
       - name: cypress run
         with:
           record: true
-        run: npm run test -env configFile=${{ github.event.inputs.environment }}
+          run: npm run test -env configFile=${{ github.event.inputs.environment }}
         env:
           # pass the Dashboard record key as an environment variable
           CYPRESS_RECORD_KEY: 223e5d7e-ab60-48ca-811c-4b9ccc5f42c8
