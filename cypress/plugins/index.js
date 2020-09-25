@@ -5,24 +5,17 @@ const path = require("path");
 function getConfigurationByFile (file) {
   const path = require("path");
   const fs = require("fs-extra");
-  const pathToConfigFile = path.resolve('./cypress', 'config', `config.${file}.json`)
+  const pathToConfigFile = path.resolve('./cypress', 'config', `${file}.json`)
 
   return fs.readJson(pathToConfigFile)
 }
 
+
+
 // plugins file
 module.exports = (on, config) => {
-  // accept a configFile value or use development by default
-  // on('before:browser:launch', (browser = {}, args) => {
-  //   console.log(config, browser, args);
-  //   if (browser.name === 'chrome') {
-  //     args.push("--disable-features=CrossSiteDocumentBlockingIfIsolating,CrossSiteDocumentBlockingAlways,IsolateOrigins,site-per-process");
-  //   }
-  //   return args;
-  // });
-
-
-  const file = config.env.configFile || 'development'
+  // accept a configFile value or use development by default  
+  const file = env.configFile || 'dev'
 
   return getConfigurationByFile(file)
 }

@@ -10,6 +10,8 @@
     "combine-reports": "mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/mochareports/report.json",
     "generate-report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports",
     "posttest": "npm run combine-reports && npm run generate-report",
+    "test:development": "./node_modules/.bin/cypress  run test --env configFile=dev --browser chrome",
+    "test:feature5": "./node_modules/.bin/cypress  run test --env configFile=feature5 --browser chrome",
     "test": "npm run scripts || npm run posttest"
   },
   "keywords": [],
@@ -26,7 +28,7 @@
   "devDependencies": {
     "cypress": "^5.2.0",
     "cypress-multi-reporters": "^1.4.0",
-    "cypress-select-tests": "^1.5.7",
+    "cypress-select-tests": "^1.5.8",
     "fs-extra": "^9.0.1",
     "mocha": "^8.1.3",
     "mochawesome": "^6.1.1",
