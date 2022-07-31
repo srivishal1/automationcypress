@@ -66,7 +66,7 @@ class registrationPage{
     
     
     checkRegistartionPageOpened() {
-        cy.title().should('eq','SSAT - Registration')
+        cy.title().should('eq','Registration')
     }
 
     selectPrefix(value) {
