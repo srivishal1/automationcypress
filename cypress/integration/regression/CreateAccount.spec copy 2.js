@@ -32,17 +32,7 @@ describe('Create Account',function(){
         registrationPageObj.enterInitial("Mr")
         registrationPageObj.enterLastName(lastName)
         accountdetails["lastName"]=lastName
-        registrationPageObj.enterPrimaryPhoneNo("555-5555-5555")
-        registrationPageObj.selectPrimaryPhoneType("Mobile")
-        registrationPageObj.enterPrarentAddressLineOne("191 NY")
-        registrationPageObj.enterPrarentAddressLineTwo("NJ")
-        registrationPageObj.selectCountry("India")
-        registrationPageObj.enterCity("New York")
-        registrationPageObj.enterZip("11111")
-        //registrationPageObj.selectState("AE")
-        registrationPageObj.enterParentEmail(firstName+"@gmail.com")
-        registrationPageObj.enterParentPassword("pencils14!")
-        registrationPageObj.enterConfirmPassword("pencils14!")
+        
 
 
 
