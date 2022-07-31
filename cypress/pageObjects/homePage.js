@@ -4,7 +4,7 @@ class homePage{
     }
 
     createAccountTxt(){
-        return cy.get('h1[class="text-center"]').contains('Create an Account')
+        return cy.get('h1[class="text-center"]').contains('Create')
     }
 
     clickOnParentSignUpBtn() {
