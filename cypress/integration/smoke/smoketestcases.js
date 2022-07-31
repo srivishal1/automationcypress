@@ -1,7 +1,7 @@
 const { groupBy } = require("cypress/types/lodash")
 const cypress = require("cypress")
 
-describe('CreateAccount',function(){
+describe('Add',function(){
 
     before(function(){
         cy.LaunchApplication()
