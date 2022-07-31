@@ -1,5 +1,5 @@
 {
-    "baseUrl" : "http://portal-dev.ssat.org/",
+    "baseUrl" : "http://www.3pillarglobal.com",
       "reporter": "cypress-multi-reporters",
       "env": {
         "environment": "dev"
